@@ -1,0 +1,63 @@
+/* pages/food/food.wxss */
+
+.warp {
+  background-color: #f1f1f1;
+}
+
+.warp-box{
+   margin-bottom: 40rpx; 
+}
+
+.warp-box:last-child{
+  margin-bottom: 0
+}
+
+.h2 {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-flow: wrap;
+  padding: 20rpx;
+}
+
+.list .item {
+  width: 31.33%;
+  margin-right: 3%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: content-box;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+
+.list .item:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+.list .item image {
+  width: 90%;
+  margin: 010rpx auto;
+  display: block;
+  height: 220rpx;
+}
+
+.list .item .content {
+  font-size: 32rpx;
+  padding: 0 10rpx;
+  display: block;
+  color: #666;
+}
+
+.list .item .price {
+  font-size: 24rpx;
+  padding: 0 10rpx;
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: red;
+  font-weight: bold;
+}

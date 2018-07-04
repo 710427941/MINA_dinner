@@ -1,0 +1,15 @@
+<view class='warp'>
+  <view class='warp-box' wx:for="{{list}}" wx:key="unique">
+    <view class='h2'>{{item.title}}</view>
+    <view class='list'>
+
+      <view class='item' wx:for="{{item.list}}" wx:for-item="food" wx:key="unique">
+        <image src='../../static/images/3.jpg'></image>
+        <text class='content'>{{food.title}}</text>
+        <text class='price'>￥{{food.price}}</text>
+      </view>
+
+    </view>
+
+  </view>
+</view>
