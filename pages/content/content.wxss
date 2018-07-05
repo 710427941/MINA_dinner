@@ -1,0 +1,151 @@
+/* pages/content/content.wxss */
+
+.warp{
+  background-color: #f1f1f1;
+}
+
+.header{
+  position: relative;
+  height: 640rpx;
+  background-color: #fff;
+}
+
+.header .return,.header .search{
+  position: absolute;
+  bottom: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  z-index: 9;
+}
+
+.header .return{
+  left: 3%;
+  width: 160rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+}
+
+.header .search{
+  width: 80rpx;
+  border-radius: 80rpx;
+  font-size: 24rpx;
+  right: 3%;
+}
+
+.header .like{
+  position: absolute;
+  z-index: 9;
+  bottom: 5%;
+  left: 3%;
+  font-size: 24rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20rpx;
+  border-radius: 40rpx;
+}
+
+.header image{
+  height: 640rpx;
+  width: 100%;
+}
+
+.main{
+  background-color: #fff;
+  margin: 20rpx 0;
+  padding: 20rpx;
+}
+
+.main .h2{
+  font-size: 36rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+
+.main .h2 text{
+  font-size: 22rpx;
+  color: #ff0f01;
+  padding: 5rpx;
+  border: 1px solid #ff0f01;
+  border-radius: 10rpx;
+  margin-left: 10px;
+}
+
+.main .price{
+  font-size: 34rpx;
+  color: #ff0f01;
+}
+
+.content{
+  background-color: #fff;
+  padding: 20rpx;
+  margin-bottom: 100rpx;
+  min-height: 540rpx;
+  border-bottom: 20rpx solid #f1f1f1;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff; 
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}
+
+.footer .h3{
+  font-size: 28rpx;
+  color: #333;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+}
+
+.footer .number{
+  width: 280rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  border:2rpx solid #f1f1f1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.footer .number text{
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 38rpx;
+  font-weight: bold;
+  color: #ff0f01;
+}
+
+.footer .number input{
+  width: 120rpx;
+  height: 80rpx;
+  border-left: 1px solid #f1f1f1;
+  border-right: 1px solid #f1f1f1;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+.addcar {
+  height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #ff0f01;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}

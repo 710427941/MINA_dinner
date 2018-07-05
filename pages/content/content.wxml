@@ -1,0 +1,33 @@
+<!--pages/content/content.wxml-->
+<view class='warp'>
+  <view class='header'>
+    <!-- <view class='return'>返回</view> -->
+    <view class='search'>分享</view>
+    <image src='{{api}}{{list.img_url}}'></image>
+    <view class='like'>1人喜欢</view>
+  </view>
+
+  <view class='main'>
+    <view class='h2'>{{list.title}}
+      <text>{{list.catename}}</text>
+    </view>
+    <view class='price'>￥{{list.price}}/份</view>
+  </view>
+
+  <view class='content'>
+    <view class='h2'>商品详情</view>
+    <view class='info'>{{list.content}}</view>
+  </view>
+
+  <view class='footer clearfix'>
+    <view class='clearfix fl'>
+      <view class='fl h3'>数量</view>
+      <view class='fl number clearfix'>
+        <text class='fl'>-</text>
+        <input type='number' value='1' class='fl'></input>
+        <text class='fl'>+</text>
+      </view>
+    </view>
+    <view class='addcar fr'>加入购物车</view>
+  </view>
+</view>

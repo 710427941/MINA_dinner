@@ -23,11 +23,27 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res.data)
+
+        var arr = res.data.result
+
+        for(var i=0; i<arr.length;i++){
+          for(var j=0;j<arr[i].list.length;j++){
+            arr[i].list[j].img_url = arr[i].list[j].img_url.replace(/\\/g,'/')
+          }
+        }
+
+        console.log(arr);
+
         that.setData({
-          list:res.data.result
+          list:arr
         })
       }
+    })
+  },
+  gotoFoodContent(event){
+    var id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../content/content?id=' + id
     })
   }
 

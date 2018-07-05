@@ -3,8 +3,8 @@
     <view class='h2'>{{item.title}}</view>
     <view class='list'>
 
-      <view class='item' wx:for="{{item.list}}" wx:for-item="food" wx:key="unique">
-        <image src='../../static/images/3.jpg'></image>
+      <view class='item' wx:for="{{item.list}}" wx:for-item="food" wx:key="unique" bindtap='gotoFoodContent' data-id='{{food._id}}'>
+        <image src='{{url}}{{food.img_url}}'></image>
         <text class='content'>{{food.title}}</text>
         <text class='price'>￥{{food.price}}</text>
       </view>

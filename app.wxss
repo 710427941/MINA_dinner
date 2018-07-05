@@ -8,3 +8,23 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.clearfix:after {
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	content: "."
+}
+
+.cb {
+	clear: both
+}
