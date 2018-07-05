@@ -1,4 +1,7 @@
 // pages/food/food.js
+
+var config = require('../../utils/config.js') 
+
 Page({
 
   /**
@@ -6,7 +9,7 @@ Page({
    */
   data: {
     list:[],
-    url:"http://a.itying.com/"
+    url: config.host
   },
 
   /**
@@ -17,6 +20,7 @@ Page({
   },
   requestData(){
     var that = this
+
     wx.request({
       url: that.data.url+'api/productlist', //仅为示例，并非真实的接口地址
       header: {
@@ -25,14 +29,11 @@ Page({
       success: function (res) {
 
         var arr = res.data.result
-
         for(var i=0; i<arr.length;i++){
           for(var j=0;j<arr[i].list.length;j++){
             arr[i].list[j].img_url = arr[i].list[j].img_url.replace(/\\/g,'/')
           }
         }
-
-        console.log(arr);
 
         that.setData({
           list:arr

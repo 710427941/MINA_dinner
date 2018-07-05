@@ -1,4 +1,8 @@
 // pages/content/content.js
+
+var WxParse = require('../../wxParse/wxParse.js')
+var config = require('../../utils/config.js')
+
 Page({
 
   /**
@@ -6,9 +10,8 @@ Page({
    */
   data: {
     list:[],
-    api:'http://a.itying.com/'
+    api: config.host
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -16,20 +19,23 @@ Page({
     this.requestData(options.id)
   },
   requestData(id){
+
     var that = this
-    var url = 'http://a.itying.com/api/productcontent?id='+id
+    var url =that.data.api+'api/productcontent?id='+id
+
     wx.request({
       url: url, 
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        var arr = res.data.result[0]
 
+        var arr = res.data.result[0]
         arr.img_url = arr.img_url.replace(/\\/g,'/')
 
-
-        console.log(res.data.result[0])
+        var article = arr.content
+        WxParse.wxParse('article', 'html', article, that, 5)
+        
         that.setData({
           list:arr
         })

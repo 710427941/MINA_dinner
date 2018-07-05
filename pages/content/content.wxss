@@ -1,5 +1,4 @@
 /* pages/content/content.wxss */
-
 .warp{
   background-color: #f1f1f1;
 }
@@ -82,8 +81,18 @@
   background-color: #fff;
   padding: 20rpx;
   margin-bottom: 100rpx;
-  min-height: 540rpx;
+  min-height: 400rpx;
   border-bottom: 20rpx solid #f1f1f1;
+}
+
+.content .h2{
+  margin-bottom: 20rpx;
+}
+
+.info{
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #666;
 }
 
 .footer{

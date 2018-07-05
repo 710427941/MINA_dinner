@@ -1,4 +1,6 @@
 <!--pages/content/content.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+
 <view class='warp'>
   <view class='header'>
     <!-- <view class='return'>返回</view> -->
@@ -16,7 +18,9 @@
 
   <view class='content'>
     <view class='h2'>商品详情</view>
-    <view class='info'>{{list.content}}</view>
+    <view class='info'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
   </view>
 
   <view class='footer clearfix'>
